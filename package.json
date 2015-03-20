@@ -1,0 +1,21 @@
+{
+  "name": "comverse",
+  "version": "0.0.1",
+  "description": "Front-end development course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ronhandler/comverse"
+  },
+  "author": "Ron Handler",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ronhandler/comverse/issues"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5"
+  }
+}
