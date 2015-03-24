@@ -9,15 +9,26 @@ module.exports = function (grunt) {
 		markdown: {
 			all: {
 				files: [{
-					//expand: true,
-					src: '<%= dirs.src %>/index.md',
-					dest: '<%= dirs.dest %>/index.html',
-					//ext: '.html'
+					src: '<%= dirs.src %>/outline.md',
+					dest: '<%= dirs.dest %>/outline.html',
 				}]
+			}
+		},
+		express: {
+			all: {
+				options: {
+					bases: ['.'],
+					port: 8080,
+					hostname: "0.0.0.0",
+					livereload: true
+				}
 			}
 		},
 		watch: {
 			files: ['<%= dirs.src %>/*.md'],
+			options: {
+				livereload: true
+			},
 			tasks: ['gen_markdown']
 		}
 	});
@@ -25,8 +36,10 @@ module.exports = function (grunt) {
 	// Load grunt plugins.
 	grunt.loadNpmTasks('grunt-markdown');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-express');
 
 	// Default task.
-	grunt.registerTask('default', ['watch']);
+	grunt.registerTask('default', ['start_webserver', 'watch']);
 	grunt.registerTask('gen_markdown', ['markdown']);
+	grunt.registerTask('start_webserver', ['express']);
 };
