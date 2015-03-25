@@ -24,6 +24,16 @@ module.exports = function (grunt) {
 				}
 			}
 		},
+		validation: {
+			options: {
+				reset: grunt.option('reset') || false,
+				stoponerror: false,
+				relaxerror: ['Bad value X-UA-Compatible for attribute http-equiv on element meta.'] //ignores these errors 
+			},
+			files: {
+				src: ['<%= dirs.dest %>/*.html']
+			}
+		},
 		watch: {
 			files: ['<%= dirs.src %>/outline.md'],
 			options: {
@@ -37,9 +47,10 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-markdown');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-express');
+	grunt.loadNpmTasks('grunt-html-validation');
 
 	// Default task.
 	grunt.registerTask('default', ['start_webserver', 'watch']);
 	grunt.registerTask('gen_markdown', ['markdown']);
-	grunt.registerTask('start_webserver', ['express']);
+	grunt.registerTask('start_webserver', ['validation', 'express']);
 };
