@@ -25,7 +25,7 @@ module.exports = function (grunt) {
 			}
 		},
 		watch: {
-			files: ['<%= dirs.src %>/*.md'],
+			files: ['<%= dirs.src %>/outline.md'],
 			options: {
 				livereload: true
 			},
