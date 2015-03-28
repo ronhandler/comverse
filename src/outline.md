@@ -11,4 +11,3 @@ Comverse Policy Studio
 
 [Learn more >](http://www.google.com)
 
- 
