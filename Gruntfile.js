@@ -14,15 +14,13 @@ module.exports = function (grunt) {
 				}]
 			}
 		},
-		express: {
-			all: {
-				options: {
-					bases: ['<%= dirs.dest %>'],
-					port: 8080,
-					hostname: "0.0.0.0",
-					livereload: true
-				}
+		connect: {
+		  server: {
+			options: {
+			  port: 8000,
+			  base: '.'
 			}
+		  }
 		},
 		validation: {
 			options: {
@@ -35,9 +33,9 @@ module.exports = function (grunt) {
 			}
 		},
 		watch: {
-			files: ['<%= dirs.src %>/outline.md'],
+			files: ['<%= dirs.src %>/outline.md', 'index.html'],
 			options: {
-				livereload: true
+				livereload: 35729,
 			},
 			tasks: ['markdown', 'validation']
 		}
@@ -47,8 +45,8 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-markdown');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-html-validation');
-	grunt.loadNpmTasks('grunt-express');
+	grunt.loadNpmTasks('grunt-contrib-connect');
 
 	// Default task.
-	grunt.registerTask('default', ['express', 'watch']);
+	grunt.registerTask('default', ['connect', 'watch']);
 };
