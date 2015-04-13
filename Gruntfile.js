@@ -33,7 +33,7 @@ module.exports = function (grunt) {
 			}
 		},
 		watch: {
-			files: ['<%= dirs.src %>/outline.md', 'index.html'],
+			files: ['<%= dirs.src %>/outline.md', 'index.html', 'css/*'],
 			options: {
 				livereload: 35729,
 			},
