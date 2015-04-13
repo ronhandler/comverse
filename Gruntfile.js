@@ -6,14 +6,6 @@ module.exports = function (grunt) {
 			dest: './',
 			img: 'img'
 		},
-		markdown: {
-			all: {
-				files: [{
-					src: '<%= dirs.src %>/outline.md',
-					dest: '<%= dirs.dest %>/outline.html',
-				}]
-			}
-		},
 		connect: {
 		  server: {
 			options: {
@@ -37,12 +29,11 @@ module.exports = function (grunt) {
 			options: {
 				livereload: 35729,
 			},
-			tasks: ['markdown', 'validation']
+			tasks: ['validation']
 		}
 	});
 
 	// Load grunt plugins.
-	grunt.loadNpmTasks('grunt-markdown');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-html-validation');
 	grunt.loadNpmTasks('grunt-contrib-connect');

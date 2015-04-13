@@ -11,7 +11,7 @@
     "url": "https://github.com/ronhandler/comverse"
   },
   "author": "Ron Handler",
-  "license": "ISC",
+  "license": "None",
   "bugs": {
     "url": "https://github.com/ronhandler/comverse/issues"
   },
@@ -21,8 +21,6 @@
     "grunt-contrib-livereload": "^0.1.2",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-html-validation": "^0.1.18",
-    "grunt-markdown": "^0.7.0",
-    "markdown": "^0.5.0",
     "watch": "^0.14.0"
   }
 }
