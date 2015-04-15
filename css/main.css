@@ -166,7 +166,7 @@ html {
 .events h3 {
     color: #ffffff;
 	/*background-color: skyblue;*/
-    background-image: url('/img/slide-bg-complexity.jpg');
+    background-image: url('img/slide-bg-complexity.jpg');
     background-size: cover;
     background-attachment: fixed;
 	font-weight: lighter;
@@ -187,7 +187,7 @@ html {
 .schedule{
 	color: white;
 	/*background-color: #d0a080;*/
-    background-image: url('/img/news-and-events-bg.jpg');
+    background-image: url('img/news-and-events-bg.jpg');
     background-size: cover;
     background-attachment: fixed;
 }
