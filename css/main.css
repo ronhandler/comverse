@@ -107,12 +107,20 @@ html {
     color: #101010;
 }
 
-.pane.top ol {
-	display: inline-flex;
-}
 .pane {
     color: #606060;
-	background-color: white;
+}
+.pane.top a {
+	/*display: inline-flex;*/
+	color: grey;
+}
+.pane.bottom p {
+	font-size: 1.2em;
+}
+.pane.bottom,
+.pane.bottom a {
+	color: white;
+	background-color: #404040;
 }
 
 /* This is a card type. It should look clickable and crunchie! */
@@ -133,10 +141,19 @@ html {
 .card:active {
 	opacity: 1;
 }
-.card.button { background-color: #0066ff; }
+.card.button {
+	background-color: #0066ff;
+}
+.card.button:after {
+	content:"\25B6"; /* This is a right triangle character. */
+	display: inline-block;
+	text-align: right;
+	width: 30px
+				
+}
 .card.one { background-color: crimson; }
 .card.two { background-color: limegreen; }
-.card.three { background-color: darkorange; }
+.card.three { background-color: orangered; }
 
 .card>a {
 	color: white;
@@ -164,6 +181,39 @@ html {
 	font-weight: lighter;
 }
 
+.schedule{
+	color: white;
+	background-color: #d0a080;
+}
+.scheduledevent article {
+	color: #202020;
+	background-color: #d0d0d0;
+	padding: 10px;
+	margin: 10px;
+	border: 2px transparent;
+	border-radius: 1px;
+    box-shadow: 0px 0px 5px #888888;
+	opacity: 0.7;
+	width: 15em;
+}
+
+.schedule a {
+	color: white;
+}
+
+.stories {
+	color: #303030;
+	background-color: #d0d0d0;
+}
+.stories blockquote {
+	background-color: white;
+	padding: 10px;
+	margin: 10px;
+	width: 20em;
+}
+.stories .name {
+	color: steelblue;
+}
 a {
 	text-decoration: none;
 }
