@@ -134,9 +134,9 @@ html {
 	opacity: 1;
 }
 .card.button { background-color: #0066ff; }
-.card.one { background-color: lightpink; }
-.card.two { background-color: lightgreen; }
-.card.three { background-color: orange; }
+.card.one { background-color: crimson; }
+.card.two { background-color: limegreen; }
+.card.three { background-color: darkorange; }
 
 .card>a {
 	color: white;
@@ -148,12 +148,20 @@ html {
 .events h2,
 .events h3 {
     color: #ffffff;
-	background-color: lightblue;
+	background-color: skyblue;
 	font-weight: lighter;
 }
 
 .events strong {
 	font-weight: bold;
+}
+
+.solutions,
+.solutions h2,
+.solutions h3 {
+    color: #ffffff;
+	background-color: steelblue;
+	font-weight: lighter;
 }
 
 a {
