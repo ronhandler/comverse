@@ -184,6 +184,24 @@ html {
 	font-weight: lighter;
 }
 
+.sol_image {
+	background-repeat: no-repeat;
+	width: 100px;
+	height: 60px;
+}
+.sol_image.one { background-image: url('../img/solution_icon_biz-analitics.png'); }
+.sol_image.one:hover { background-image: url('../img/solution_icon_biz-analitics_hover.png'); }
+.sol_image.two { background-image: url('../img/solution_icon_biz-transform.png'); }
+.sol_image.two:hover { background-image: url('../img/solution_icon_biz-transform_hover.png'); }
+.sol_image.three { background-image: url('../img/solution_icon_diti-cx.png'); }
+.sol_image.three:hover { background-image: url('../img/solution_icon_diti-cx_hover.png'); }
+.sol_image.four { background-image: url('../img/solution_icon_optimize-efficnt.png'); }
+.sol_image.four:hover { background-image: url('../img/solution_icon_optimize-efficnt_hover.png'); }
+.sol_image.five { background-image: url('../img/solution_icon_personal.png'); }
+.sol_image.five:hover { background-image: url('../img/solution_icon_personal_hover.png'); }
+.sol_image.six { background-image: url('../img/solution_icon_smart-money.png'); }
+.sol_image.six:hover { background-image: url('../img/solution_icon_smart-money_hover.png'); }
+
 .schedule{
 	color: white;
 	/*background-color: #d0a080;*/
