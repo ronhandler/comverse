@@ -131,7 +131,7 @@ html {
 	margin: 10px;
 	border: 2px transparent;
 	border-radius: 8px;
-    box-shadow: 0px 0px 5px #888888;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.75);
 	opacity: 0.8;
 	width: 15em;
 }
@@ -165,7 +165,10 @@ html {
 .events h2,
 .events h3 {
     color: #ffffff;
-	background-color: skyblue;
+	/*background-color: skyblue;*/
+    background-image: url('/img/slide-bg-complexity.jpg');
+    background-size: cover;
+    background-attachment: fixed;
 	font-weight: lighter;
 }
 
@@ -183,7 +186,10 @@ html {
 
 .schedule{
 	color: white;
-	background-color: #d0a080;
+	/*background-color: #d0a080;*/
+    background-image: url('/img/news-and-events-bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
 }
 .scheduledevent article {
 	color: #202020;
@@ -192,7 +198,7 @@ html {
 	margin: 10px;
 	border: 2px transparent;
 	border-radius: 1px;
-    box-shadow: 0px 0px 5px #888888;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.75);
 	opacity: 0.7;
 	width: 15em;
 }
@@ -214,6 +220,15 @@ html {
 .stories .name {
 	color: steelblue;
 }
+.slide_effect {
+    transition: all 1s ease-in-out;
+}
+.slide_effect:hover {
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0px 0px 25px rgba(255,255,255,1);
+	text-shadow: 0 0 0.5em rgba(0,255,255,1);
+}
+
 a {
 	text-decoration: none;
 }
