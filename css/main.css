@@ -105,48 +105,55 @@ html {
 
 .logo {
     color: #101010;
-	display: inline-block;
+}
+.logo>* {
+	vertical-align: bottom;
+	padding-bottom: 10px;
 }
 
 .pane {
     color: #606060;
 }
-
-.pane.top>* {
-	display: inline-block;
-    vertical-align: bottom;
+.pane>* {
+	margin-right: 20px;
 }
 
-/* Adding a separator between menu items. */
-.pane.top ol li:last-child p:after {
+/* Adding separators between menu items. */
+.pane ul li:last-child p:after {
 	content: "";
 }
-.pane.top ol li p:after {
+.pane ul li p:after {
 	content: " | ";
 	color: #DDDDDD;
 }
 
-.pane ol>* {
+.pane>* {
 	display: inline-block;
+	/*vertical-align: bottom;*/
 }
 
-.pane ol ol li {
-	display: block;
+.pane.top ul>li {
+	display: inline-block;
+	position: relative;
+    background-color: rgba(255,255,255,0.75);
 }
-.pane ol ol {
-	display: none;
+.pane.top ul>li>ul {
+	position: absolute;
+	transition: all 0.25s ease-in;
+	opacity: 0;
+	visibility:hidden;
 }
-.pane ol:hover ol {
-	display: block;
+.pane.top ul>li>ul>li {
+	display: inline-block;
+	/*min-width: 100px;*/
+	padding: 0px 20px 20px 20px;
 }
-
-
-/*
- *nav > li {
- *  float: left;
- *  position: relative;
- *}
- */
+.pane.top ul>li:hover>ul {
+	display: inline-block;
+	transition: all 0.25s ease-in-out;
+	opacity: 1;
+	visibility:visible;
+}
 
 .pane.top a {
 	color: grey;
@@ -158,6 +165,19 @@ html {
 .pane.bottom a {
 	color: white;
 	background-color: #404040;
+}
+
+form {
+	bottom: 1em;
+}
+form>input {
+	font-size: 0.8em;
+	width: 8em;
+	border-radius: 5px;
+	border-width: 1px;
+    background-image: url('../img/searchBtn.png');
+	background-repeat: no-repeat;
+	background-position: right;
 }
 
 /* This is a card type. It should look clickable and crunchie! */
@@ -202,9 +222,10 @@ html {
 .events h2,
 .events h3 {
     color: #ffffff;
-	/*background-color: skyblue;*/
     background-image: url('../img/slide-bg-complexity.jpg');
-    background-size: cover;
+	background-size: cover;
+	/*background-size: 100% auto ;*/
+	background-repeat: no-repeat;
     background-attachment: fixed;
 	font-weight: lighter;
 }
