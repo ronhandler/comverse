@@ -105,13 +105,50 @@ html {
 
 .logo {
     color: #101010;
+	display: inline-block;
 }
 
 .pane {
     color: #606060;
 }
+
+.pane.top>* {
+	display: inline-block;
+    vertical-align: bottom;
+}
+
+/* Adding a separator between menu items. */
+.pane.top ol li:last-child p:after {
+	content: "";
+}
+.pane.top ol li p:after {
+	content: " | ";
+	color: #DDDDDD;
+}
+
+.pane ol>* {
+	display: inline-block;
+}
+
+.pane ol ol li {
+	display: block;
+}
+.pane ol ol {
+	display: none;
+}
+.pane ol:hover ol {
+	display: block;
+}
+
+
+/*
+ *nav > li {
+ *  float: left;
+ *  position: relative;
+ *}
+ */
+
 .pane.top a {
-	/*display: inline-flex;*/
 	color: grey;
 }
 .pane.bottom p {
