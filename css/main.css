@@ -103,9 +103,18 @@ html {
 	font-variant: normal;
 }
 
-.logo {
-    color: #101010;
+body>header,
+body>section,
+body>article,
+body>footer {
+	display: block;
+	padding: 0px;
+	margin: 0px;
+	padding-left: 15%;
+	padding-right: 15%;
+	text-align: left;
 }
+
 .logo>* {
 	vertical-align: bottom;
 	padding-bottom: 10px;
@@ -113,9 +122,6 @@ html {
 
 .pane {
     color: #606060;
-}
-.pane>* {
-	margin-right: 20px;
 }
 
 /* Adding separators between menu items. */
@@ -135,24 +141,29 @@ html {
 .pane.top ul>li {
 	display: inline-block;
 	position: relative;
-    background-color: rgba(255,255,255,0.75);
 }
+/* The rectangle surrounding each menu item. */
 .pane.top ul>li>ul {
-	position: absolute;
 	transition: all 0.25s ease-in;
+	z-index: 1000;
+	position: absolute;
 	opacity: 0;
 	visibility:hidden;
+	min-width: 100px;
+	border-radius: 3px;
+	padding: 1em;
+	padding-left: -1em;
+	margin-left:  -1em;
 }
 .pane.top ul>li>ul>li {
-	display: inline-block;
-	/*min-width: 100px;*/
-	padding: 0px 20px 20px 20px;
+	display: block;
 }
+/*.pane.top ul>li:hover,*/
 .pane.top ul>li:hover>ul {
-	display: inline-block;
 	transition: all 0.25s ease-in-out;
 	opacity: 1;
 	visibility:visible;
+    background-color: rgba(255,255,255,0.9);
 }
 
 .pane.top a {
@@ -191,6 +202,7 @@ form>input {
     box-shadow: 0px 0px 10px rgba(0,0,0,0.75);
 	opacity: 0.8;
 	width: 15em;
+	min-height: 150px;
 }
 .card:hover {
 	opacity: 0.9;
@@ -205,8 +217,7 @@ form>input {
 	content:"\25B6"; /* This is a right triangle character. */
 	display: inline-block;
 	text-align: right;
-	width: 30px
-				
+	width: 30px;
 }
 .card.one { background-color: crimson; }
 .card.two { background-color: limegreen; }
@@ -222,29 +233,62 @@ form>input {
 .events h2,
 .events h3 {
     color: #ffffff;
+	font-weight: lighter;
+}
+
+.events>h2,
+.events>h3,
+.events>ul {
+	/*text-align: center;*/
+}
+
+.events {
     background-image: url('../img/slide-bg-complexity.jpg');
-	background-size: cover;
-	/*background-size: 100% auto ;*/
+	background-position: center top;
+	/*background-size: cover;*/
+	background-size: 100% cover ;
 	background-repeat: no-repeat;
     background-attachment: fixed;
-	font-weight: lighter;
+	padding-bottom: 0px;
+	margin: 0px;
 }
 
 .events strong {
 	font-weight: bold;
 }
 
+.events li {
+	display: inline-block;
+	padding-top: 2em;
+	vertical-align: bottom;
+}
+
 .solutions,
 .solutions h2,
 .solutions h3 {
     color: #ffffff;
+	text-align: center;
 	background-color: steelblue;
 	font-weight: lighter;
+}
+.solutions {
+	/*margin: 0px;*/
+}
+.solutions li {
+	display: inline-block;
+}
+.solutions h3 {
+	width: 7em;
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
 }
 
 .sol_image {
 	background-repeat: no-repeat;
-	width: 100px;
+	background-position: center;
+	/*background-size: 100px;*/
+	/*width: auto;*/
 	height: 60px;
 }
 .sol_image.one { background-image: url('../img/solution_icon_biz-analitics.png'); }
@@ -264,9 +308,16 @@ form>input {
 	color: white;
 	/*background-color: #d0a080;*/
     background-image: url('../img/news-and-events-bg.jpg');
-    background-size: cover;
     background-attachment: fixed;
+	background-size: cover ;
+	background-position: center bottom;
+	background-repeat: no-repeat;
 }
+
+.schedule li {
+	display: inline-block;
+}
+
 .scheduledevent article {
 	color: #202020;
 	background-color: #d0d0d0;
@@ -287,11 +338,16 @@ form>input {
 	color: #303030;
 	background-color: #d0d0d0;
 }
+.stories li {
+	display: inline-block;
+	vertical-align: top;
+}
 .stories blockquote {
 	background-color: white;
 	padding: 10px;
 	margin: 10px;
-	width: 20em;
+	width: 15em;
+	min-height: 20em;
 }
 .stories .name {
 	color: steelblue;
