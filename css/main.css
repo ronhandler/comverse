@@ -462,6 +462,10 @@ form>input {
 	text-align: left;
 }
 
+.stories>ul {
+	margin-bottom: 2rem;
+}
+
 .stories .front {
 	/*background-color: black;*/
 }
