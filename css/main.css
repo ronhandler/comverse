@@ -447,40 +447,26 @@ form>input {
 	width: 60%;
 }
 
-
-
-/*
- *.stories {
- *    color: #303030;
- *    background-color: #d0d0d0;
- *}
- *.stories ul {
- *    padding-bottom: 2rem;
- *}
- *.stories li {
- *    display: inline-block;
- *    vertical-align: top;
- *}
- */
-
 .stories {
 	color: #303030;
 	background-color: #d0d0d0;
 }
-.stories>ul {
-	padding-bottom: 2em;
+.stories ul {
+	padding-bottom: 1px;
 	padding-top: 1px;
 	/*padding-bottom: 2rem;*/
 }
-
 .stories li {
 	display: inline-block;
 	vertical-align: top;
 	text-align: left;
 }
 
+.stories .front {
+	/*background-color: black;*/
+}
+
 .stories blockquote {
-	background-color: white;
 	padding: 10px;
 	margin: 4px;
 	width: 15em;
@@ -492,6 +478,17 @@ form>input {
 	height: 5em;
 	margin: 3px;
 }
+
+/*
+ *.slide_effect {
+ *    transition: all 1s ease-in-out;
+ *}
+ *.slide_effect:hover {
+ *    transition: all 0.5s ease-in-out;
+ *    box-shadow: 0px 0px 25px rgba(255,255,255,1);
+ *    text-shadow: 0 0 0.5em rgba(0,255,255,1);
+ *}
+ */
 
 .stories .name {
 	color: steelblue;
@@ -508,6 +505,10 @@ form>input {
 }
 .companies img {
 	-webkit-filter: grayscale(100%);
+	transition: all 0.25s ease-in-out;
+}
+.companies img:hover {
+	-webkit-filter: grayscale(0%);
 }
 .stories .face {
 	font-size: 0px;
@@ -542,6 +543,58 @@ form>input {
 	background-repeat: no-repeat;
 	margin-right: 1em;
 }
+
+
+.flipper {
+	background-color: white;
+	transform-style: preserve-3d;
+	transition: 0.6s;
+	position: relative;
+}
+
+.flipper:hover {
+	transform: rotateY(180deg);
+}
+
+.stories ul li {
+	/*float: left;*/
+	/*position: relative;*/
+}
+
+.container {
+	perspective: 1000;
+	/*display: block;*/
+	float: left;
+}
+.container, .front, .back {
+	background-color: white;
+	backface-visibility: hidden;
+	position: absolute;
+	width: 16.5em;
+	height: 15em;
+}
+
+.back>* {
+	top: 0;
+	bottom: 0;
+	float: left;
+ }
+
+.front {
+	z-index: 2;
+	transform: rotateY(0deg);
+	position: relative;
+	float: right;
+}
+.back {
+	transform: rotateY(180deg);
+}
+
+.back h3 {
+	font-size: 1em;
+	margin: 2rem;
+}
+
 
 a {
 	text-decoration: none;
