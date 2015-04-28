@@ -109,6 +109,7 @@ h2, h3 {
 }
 h2 {
 	font-size: 2.5rem;
+    text-transform: uppercase;
 }
 h3 {
 	font-size: 1rem;
@@ -229,6 +230,8 @@ form>input {
 	opacity: 0.8;
 	width: 15em;
 	min-height: 150px;
+	display: inline-block;
+	transition: all 0.25s ease-in-out;
 }
 .card:hover {
 	opacity: 0.9;
@@ -238,6 +241,7 @@ form>input {
 }
 .card.button {
 	background-color: #0066ff;
+	display: inline;
 }
 .card.button:after {
 	content:"\25B6"; /* This is a right triangle character. */
@@ -278,10 +282,9 @@ form>input {
 
 .events {
     background-image: url('../img/slide-bg-complexity.jpg');
-	background-position: center top;
 	background-color: white;
-	/*background-size: cover;*/
 	background-size: 100% cover ;
+	background-position: center top;
 	background-repeat: no-repeat;
     background-attachment: fixed;
 	padding-bottom: 0px;
@@ -336,6 +339,7 @@ form>input {
 .sol_image {
 	background-repeat: no-repeat;
 	background-position: center;
+	transition: all 0.25s ease-out;
 	/*background-size: 100px;*/
 	/*width: auto;*/
 	height: 60px;
@@ -358,30 +362,89 @@ form>input {
 	/*background-color: #d0a080;*/
     background-image: url('../img/news-and-events-bg.jpg');
     background-attachment: fixed;
-	background-size: cover;
-	/*background-size: 100% cover ;*/
-	background-position: bottom right;
+	/*background-size: cover;*/
+	/*background-position: bottom right;*/
+	background-size: auto 100%;
+	background-position: 50%;
 	background-repeat: no-repeat;
 }
 
 .schedule li {
 	display: inline-block;
+	text-align: left;
 }
 
-.scheduledevent article {
+.schedule a {
+	color: white;
+}
+
+.cal:before {
+	content: "04";
+	display: block;
+}
+.cal:after {
+	content: "SEP";
+	display: block;
+}
+
+.scheduledevent > h3 {
+	font-size: 200%;
+    text-transform: uppercase;
+	margin-left: 1rem;
+}
+
+.scheduledevent > a {
+	padding-left: 2rem;
+	margin-left: 1rem;
+    background-image: url('../img/eventListIconEvents.png');
+	/*background-size: 100% cover ;*/
+	/*background-position: center top;*/
+	background-repeat: no-repeat;
+    /*background-attachment: fixed;*/
+}
+.scheduledevent > a:hover {
+    background-image: url('../img/eventListIconEvents_hover.png');
+}
+li:first-child .scheduledevent > a {
+    background-image: url('../img/eventListIconNews.png');
+}
+li:first-child .scheduledevent > a:hover {
+    background-image: url('../img/eventListIconNews_hover.png');
+}
+
+.scheduledevent>article {
 	color: #202020;
-	background-color: #d0d0d0;
 	padding: 10px;
 	margin: 10px;
 	border: 2px transparent;
 	border-radius: 1px;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.75);
-	opacity: 0.7;
+	/*opacity: 0.7;*/
 	width: 15em;
+	background-color: rgba(255,255,255,0.5);
+    transition: all 0.5s ease-in-out;
 }
 
-.schedule a {
+.scheduledevent>article:hover {
+	background-color: rgba(255,255,255,0.7);
+}
+
+.scheduledevent article>* {
+	vertical-align: center;
+	display: inline-block;
+}
+.scheduledevent article>.cal {
+	background-color: rgba(100,170,255,1);
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.65);
 	color: white;
+	font-weight: bold;
+	text-align: center;
+	font-size: 2rem;
+	padding: 5px;
+	margin: 2px;
+}
+.scheduledevent article>h3 {
+	width: 60%;
 }
 
 .stories {
@@ -420,6 +483,7 @@ a {
 	text-decoration: none;
 }
 a:hover {
+	transition: all 0.25s ease-in-out;
 	text-decoration: underline;
 }
 
