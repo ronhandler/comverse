@@ -1,0 +1,992 @@
+/*! HTML5 Boilerplate v5.0.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+@import "compass/css3";
+@import "compass/typography/links/hover-link";
+@import "compass/typography/links/link-colors";
+@import "compass/utilities/general/clearfix";
+
+@import "base";
+
+$center-margin-small:  100%;
+$center-margin-medium: 100%;
+$center-margin-large:  85%;
+
+$navigation-pane-size: 60px;
+
+$grid-width: 17rem;
+$radius: 0.5rem;
+
+$button-color: rgba(#0099ff, 0.6);
+.button {
+	@include transition(all 0.2s ease-in-out);
+	@include background-image(linear-gradient(rgba(transparent,0), rgba(black, 0.3)));
+}
+
+html {
+	background-color: #303030;
+	color: white; /* Text coloring everything to white. */
+}
+
+body {
+	font: 100% 'Open Sans';
+	font-style: normal;
+	font-variant: normal;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+.center-wrapper {
+	width: $center-margin-large;
+	margin: 0 auto;
+	@include tablets {
+		width: $center-margin-medium;
+	}
+}
+
+a {
+	@include hover-link;
+	@include link-colors(#444, darkblue);
+}
+
+ul, li {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	font-size: 1rem;
+	font-weight: lighter;
+	font-style: normal;
+	margin: 0;
+	padding: 0;
+}
+
+.menubar-button {
+	//top: 0;
+	@include box-shadow(rgba(black, 0.35) 0 0 5px);
+	border-radius: $radius;
+	padding: 10px;
+    //background-size: 100% 100%;
+	@include widescreens {
+		display: none;
+	}
+	@include handhelds {
+		//max-width: $navigation-pane-size;
+		//max-height: $navigation-pane-size;
+	}
+}
+
+.pane:not(.footer) {
+	$shadow-size: 10px;
+	@include box-shadow(rgba(black, 0.35) 0 0 $shadow-size);
+}
+.pane:first-of-type {
+	$padding: 1rem;
+	padding-bottom: $padding;
+}
+.pane:not(:first-of-type) {
+	$padding: 1rem;
+	padding-top: $padding;;
+	padding-bottom: $padding;
+}
+
+$carousel-button-size: 20px;
+.carousel-button {
+	@include transition(all 0.35s ease-in-out);
+	color: transparent;
+	display: inline-block;
+	width: $carousel-button-size;
+	height: $carousel-button-size;
+	background-color: rgba(white, 0.8);
+	border-radius: $radius/2;
+	&:hover {
+		background-color: $button-color;
+	}
+}
+.carousel-menu  {
+	width: 3*$grid-width - ($radius);
+	display: inline-block;
+	text-align: left;
+	margin: 1rem 0 1rem 0;
+}
+
+.article-cards article {
+	//@include debug;
+	display: inline-block;
+	//max-width: $grid-width;
+	max-width: $grid-width - (3*$radius);
+	min-height: 6rem;
+	border-radius: $radius;
+	padding: 2*$radius;
+	text-align: left;
+	vertical-align: bottom;
+	$transparency: 0.7;
+	&.one { background: rgba(deeppink, $transparency); }
+	&.two { background: rgba(limegreen, $transparency); }
+	&.three { background: rgba(orangered, $transparency); }
+}
+
+
+.navigation.pane {
+	padding-bottom: 10px;
+	height: $navigation-pane-size;
+	width: 100%;
+	vertical-align: bottom;
+	min-height: 60px;
+	@include widescreens {
+		position: fixed;
+	}
+	@include handhelds {
+		min-height: 30px;
+	}
+
+	.links-and-search {
+		display: inline-block;
+	}
+	.links, .search-bar {
+		text-align: right;
+		display: block;
+		margin-left: 2rem;
+	}
+	.logo,.menu-bar {
+		display: inline-block;
+		@include handhelds {
+			//float: top;
+		}
+	}
+	.menu-bar .dropdown li {
+		display: block;
+		text-align: left;
+	}
+
+	background-color: white;
+}
+
+/* Adding separators between menu items. */
+.links ul li:last-child a:after,
+.navigation.pane ul li:last-child h4:after {
+	content: "";
+}
+.links ul li a:after,
+.navigation.pane ul li h4:after {
+	content: " | ";
+	color: #DDDDDD;
+}
+
+.highlights.pane {
+	$img: 'slide-bg-complexity.jpg';
+	background: image-url($img) 0 0 no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	@include widescreens {
+		padding-top: $navigation-pane-size * 1.5;
+	}
+	// Temporarily disabling the sliding carousel. Only first item.
+	&>div>ul>li:not(:first-child) * {
+		display: none;
+	}
+	&>div>ul>li section {
+		//@include debug;
+		display: inline-block;
+		width: $grid-width*3;
+		max-width: 100%;
+		text-align: left;
+		& p {
+			max-width: $grid-width*1.5;
+		}
+		@include tablets {
+			border-radius: $radius;
+			background-color: $button-color;
+			padding: 2*$radius;
+		}
+	}
+}
+.article-cards article {
+	@include tablets {
+		//@include debug;
+		display: block;
+	}
+}
+.solutions.pane {
+	@include background-image(radial-gradient(50% 50% 0, rgba(147,206,222,1) 10px, #1e90ff 60px));
+	li {
+		//@include debug;
+		display: inline-block;
+
+		width: $grid-width/2 - (3.8*$radius);
+		min-height: 5rem;
+		border-radius: $radius;
+		padding: 2*$radius;
+		vertical-align: bottom;
+		@include tablets {
+			display: block;
+		}
+	}
+	ul a {
+		@include link-colors(white, darken($button-color, 30%));
+	}
+}
+.solution-img {
+	@include transition(all 0.35s ease-in-out);
+	background-position: center top;
+	$img: 'solution_icon_biz-analitics.png';
+	width: image-width($img);
+	height: image-height($img);
+	padding-top: image-height($img);
+}
+.solution-img.one { background: image-url('solution_icon_biz-analitics.png') 0 0 no-repeat; }
+.solution-img.one:hover { background: image-url('solution_icon_biz-analitics_hover.png') 0 0 no-repeat; }
+.solution-img.two { background: image-url('solution_icon_biz-transform.png') 0 0 no-repeat; }
+.solution-img.two:hover { background: image-url('solution_icon_biz-transform_hover.png') 0 0 no-repeat; }
+.solution-img.three { background: image-url('solution_icon_diti-cx.png') 0 0 no-repeat; }
+.solution-img.three:hover { background: image-url('solution_icon_diti-cx_hover.png') 0 0 no-repeat; }
+.solution-img.four { background: image-url('solution_icon_optimize-efficnt.png') 0 0 no-repeat; }
+.solution-img.four:hover { background: image-url('solution_icon_optimize-efficnt_hover.png') 0 0 no-repeat; }
+.solution-img.five { background: image-url('solution_icon_personal.png') 0 0 no-repeat; }
+.solution-img.five:hover { background: image-url('solution_icon_personal_hover.png') 0 0 no-repeat; }
+.solution-img.six { background: image-url('solution_icon_smart-money.png') 0 0 no-repeat; }
+.solution-img.six:hover { background: image-url('solution_icon_smart-money_hover.png') 0 0 no-repeat; }
+
+.news.pane {
+	$img: 'news-and-events-bg.jpg';
+	background: image-url($img) 0 0 no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	vertical-align: bottom;
+	li {
+		//@include debug;
+		display: inline-block;
+		min-height: 10rem;
+		border-radius: $radius/3;
+	}
+	article {
+		padding: 2*$radius;
+		max-width: $grid-width - (3.8*$radius);
+		@include transition(all 0.35s ease-in-out);
+		background-color: rgba(white, 0.25);
+		&:hover {
+			background-color: rgba(white, 0.40);
+		}
+		&>p {
+			padding-left: 0.5rem;
+			max-width: 70%;
+		}
+	}
+	p {
+		color: black;
+	}
+	a {
+		@include link-colors(white, #a0a0a0);
+		padding-left: 2rem;
+		margin-left: 1rem;
+		background-repeat: no-repeat;
+		background-image: image-url('eventListIconEvents.png');
+		@include transition(all 0.35s ease-in-out);
+		&:hover {
+			background-image: image-url('eventListIconEvents_hover.png');
+		}
+	}
+}
+
+.news.pane li:first-child a {
+	background-image: image-url('eventListIconNews.png');
+	&:hover {
+		background-image: image-url('eventListIconNews_hover.png');
+	}
+}
+
+.news.pane li {
+	text-align: left;
+}
+.news.pane header {
+	background-color: rgba($button-color, 1);
+	border-radius: 2px;
+	$shadow-size: 10px;
+	@include box-shadow(rgba(black, 0.35) 0 0 2*$shadow-size);
+	max-width: 25%;
+	p {
+		color: white;
+	}
+}
+.day {
+	font-size: 3rem;
+	text-align: center;
+}
+.month {
+	font-size: 1.5rem;
+	text-align: center;
+}
+.news.pane article>* {
+	display: inline-block;
+}
+.footer.pane {
+	& > div > ul > li {
+		display: inline-block;
+		//max-width: $grid-width;
+		max-width: $grid-width - (4*$radius);
+		text-align: left;
+		vertical-align: top;
+	}
+	& > div >* {
+		display: inline-block;
+		vertical-align: bottom;
+	}
+	a {
+		@include link-colors(white, #a0a0a0);
+	}
+}
+.social {
+	//width: $grid-width/2.5;
+	height: 16rem;
+	padding: 1rem;
+	display: inline-block;
+	background-color: rgba(white, 0.1);
+	min-width: $grid-width;
+	display: block;
+	article>*,
+	.subscribe-box>*,
+	.subscribe-box input  {
+		text-align: left;
+		width: $grid-width/2.5;
+		display: inline-block;
+	}
+	h3 {
+		color: lighten($button-color, 20%);
+	}
+	ul {
+		margin-top: 3rem;
+		li {
+			display: inline-block;
+		}
+	}
+}
+.subscribe-box * {
+	vertical-align: top;
+}
+.social .submit-button {
+	background-color: lighten($button-color, 20%);
+	text-align: center;
+	padding-left: 5px;
+	padding-right: 5px;
+	height: 21px;
+	width: auto;
+}
+
+.social-img {
+	@include transition(all 0.35s ease-in-out);
+	background-position: center top;
+	$img: 'socialMenuIcon-linkdin.png';
+	width: image-width($img);
+	height: image-height($img);
+	padding-top: image-height($img);
+}
+.social-img.one { background: image-url('socialMenuIcon-linkdin.png') 0 0 no-repeat; }
+.social-img.one:hover { background: image-url('socialMenuIcon-linkdin_hover.png') 0 0 no-repeat; }
+.social-img.two { background: image-url('socialMenuIcon-twitter.png') 0 0 no-repeat; }
+.social-img.two:hover { background: image-url('socialMenuIcon-twitter_hover.png') 0 0 no-repeat; }
+.social-img.three { background: image-url('socialMenuIcon-youtube.png') 0 0 no-repeat; }
+.social-img.three:hover { background: image-url('socialMenuIcon-youtube_hover.png') 0 0 no-repeat; }
+
+///socialMenuIcon-linkdin_hover.png
+///socialMenuIcon-twitter_hover.png
+///socialMenuIcon-youtube_hover.png
+
+
+.menu-bar,
+.links {
+	li {
+		background-color: white;
+		display: inline-block;
+	}
+	& ul {
+		@include handhelds {
+			display: none;
+		}
+		@include tablets {
+			display: none;
+		}
+	}
+}
+
+.menu-bar>ul {
+	@include handhelds {
+		//float: left;
+		position: absolute;
+		z-index: 100;
+		top: $navigation-pane-size*1.1;
+		right: 0;
+		left: 0;
+		& li {
+			display: block;
+		}
+	}
+	@include tablets {
+		//float: left;
+		position: absolute;
+		z-index: 100;
+		top: $navigation-pane-size*1.1;
+		right: 0;
+		left: 0;
+		& li {
+			display: block;
+		}
+	}
+	& ul:hover {
+		//display: none;
+	}
+}
+
+.search-bar input {
+	background: image-url('searchBtn.png') 0 0 no-repeat;
+	background-color: rgba(white, 1);
+	background-repeat: no-repeat;
+	background-position: right;
+	border-radius: $radius;
+}
+.search-bar form {
+	@include handhelds {
+		display: none;
+	}
+	@include tablets {
+		display: none;
+	}
+}
+
+.hamburger.checkbox:checked {
+	& ~ .menu-bar * {
+		@include handhelds {
+			display: block
+		}
+		@include tablets {
+			display: block;
+		}
+	}
+}
+.search.checkbox:checked ~ .links-and-search form {
+	@include handhelds {
+		display: block;
+		position: absolute;
+		right: 1rem;
+		top: $navigation-pane-size*1.1;
+	}
+	@include tablets {
+		display: block;
+		position: absolute;
+		right: 1rem;
+		top: $navigation-pane-size*1.1;
+	}
+}
+
+.search-bar {
+	input {
+		width: 10rem;
+	}
+}
+
+/* The search menu button. */
+.search.menubar-button {
+	float: right;
+	$img: 'searchBtnMobile.png';
+	background: image-url($img) 0 0 no-repeat;
+	background-color: #eee;
+	background-position: center;
+	width: image-width($img);
+	height: image-height($img);
+
+	margin: 10px 10px 0 0;
+	@include widescreens {
+		display: none;
+	}
+}
+
+.checkbox {
+	display: none;
+}
+
+.hamburger.menubar-button {
+	float: left;
+	$img: 'hamburger-icon.png';
+	background: image-url($img) 0 0 no-repeat;
+	background-color: #eee;
+	background-position: center;
+	width: image-width($img);
+	height: image-height($img);
+	
+	margin: 10px 0 0 10px;
+	@include widescreens {
+		display: none;
+	}
+}
+
+.menu-bar>* {
+	background-color: white;
+	//left: 0;
+	@include handhelds {
+		text-align: left;
+		position: relative;
+		float: left;
+	}
+	@include tablets {
+		text-align: left;
+		position: relative;
+		float: left;
+	}
+}
+
+/* Testing. Consider deleting this... */
+.logo {
+	$img : 'comverse-logo.png';
+	background: image-url($img) 0 0 no-repeat;
+	width: image-width($img);
+	height: image-height($img);
+
+	@include widescreens {
+		//margin-left: 10%;
+	}
+	@include tablets {
+		//display: block;
+		//width: 120px;
+	}
+	@include handhelds {
+		//width: 70px;
+	}
+}
+
+// Dropdown menu settings.
+.dropdown {
+	$dropdown-margin: 2rem;
+	transition: all 0.25s ease-in;
+	z-index: 50;
+	position: absolute;
+	opacity: 0;
+	visibility:hidden;
+	min-width: 100px;
+	padding: $dropdown-margin;
+    background-color: white;
+}
+
+.menu-bar section:hover .dropdown {
+	transition: all 0.25s ease-in-out;
+	opacity: 1;
+	visibility:visible;
+}
+
+.menu-bar section:hover {
+	transition: all 0.25s ease-in-out;
+	@include widescreens {
+		$shadow-size: 10px;
+		@include box-shadow(rgba(black, 0.35) 0px -0.5*$shadow-size 2*$shadow-size);
+	}
+}
+.menu-bar h4 {
+	color: #555;
+}
+
+.dropdown {
+	transition: all 0.25s ease-in-out;
+	$shadow-size: 10px;
+	@include box-shadow(rgba(black, 0.35) 0px $shadow-size $shadow-size);
+}
+
+.outline-only {
+	display: none !important;
+}
+
+.pane .button {
+	padding: 8px;
+	display: inline-block;
+	border-radius: $radius;
+	a {
+		@include link-colors(white);
+		text-decoration: none;
+		//text-transform: uppercase;
+	}
+	a:after {
+		content:"\25B6"; /* This is a right triangle character. */
+		display: inline-block;
+		text-align: right;
+		width: 30px;
+	}
+	background-color: $button-color;
+	&:hover {
+		background-color: darken($button-color, 15%);
+	}
+}
+$stories-width: $grid-width*1.15;
+.stories.pane {
+	background-color: #eee;
+	h2 {
+		color: rgba(black, 0.8);
+	}
+	li {
+		//@include debug;
+		color: rgba(black, 0.8);
+		display: inline-block;
+		max-width: $stories-width;
+		//min-height: 18rem;
+		vertical-align: bottom;
+		text-align: left;
+	}
+	img {
+		width: 5rem;
+	}
+}
+.front {
+	.face, h4, footer {
+		font-size: 0.8rem;;
+		display: inline-block;
+		padding: 0.5rem;
+		vertical-align: top;
+	}
+}
+.stories.pane h4 {
+	text-align: justify;
+	&:before, &:after {
+		content: " ";
+		width: 1.2em;
+		height: 1.2em;
+		display: inline-block;
+		background: image-url('quote-grey.png');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		margin-right: 1em;
+	}
+}
+.stories.pane .firstname {
+	color: $button-color;
+	text-transform: uppercase;
+}
+.front .face {
+	width: 25%;
+}
+.front h4 {
+	width: 60%;
+}
+
+.flip-wrapper {
+	width: $stories-width;
+	height: 15rem;
+    margin: auto;
+    position: relative;
+	margin-bottom: 0.5rem;
+	&:hover .front {
+		z-index: 1;
+		@include transform(rotateX(180deg));
+	}
+	&:hover .back {
+		z-index: 2;
+		@include transform(rotateX(0deg));
+	}
+}
+.last .flip-wrapper {
+	width: 100%;
+}
+
+.front,.back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+	@include transition(all 0.35s ease-in-out);
+    @include backface-visibility(hidden);
+}
+.front {
+    z-index: 2;
+	background-color: rgba(white, 1);
+}
+.back {
+    z-index: 1;
+	background-color: rgba(white, 1);
+	@include transform(rotateX(-180deg));
+}
+.company {
+	margin-bottom: 0.5rem;
+	display: inline-block;
+	background-color: rgba(white, 0.8);
+	width: ($stories-width - 0.8rem)/3;
+	height: auto;
+	//width: auto;
+	//height: 100%;
+	text-align: center;
+	//@include transition(all 0.5s ease-in-out);
+	&:hover {
+		background: image-url('logos_generic_2nd_side_cut_02_w108px_x_h95px.jpg');
+		background-position: center;
+		img {
+			visibility: hidden;
+		}
+	}
+}
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers:
+ * http://juicystudio.com/article/screen-readers-display-none.php
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

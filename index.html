@@ -3,328 +3,549 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Comverse clone</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
-
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-
 		<!-- Open Sans font inclusion. -->
 		<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
-
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/style.css">
+        <meta name="description" content="">
+        <title>Test</title>
     </head>
     <body>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
 
-        <!-- ============================================ -->
-        <!-- Here begins my markup design of Comverse.com -->
-        <!-- ============================================ -->
+		<h1 class="outline-only">Comverse</h1>
 
-		<header class="pane top">
-			<h1><a class="logo" href="index.html">
-				<img src="img/comverse-logo.png" alt="Comverse">
-			</a></h1>
-			<nav>
+		<nav class="navigation pane">
+			<div class="center-wrapper">
+			<h2 class="outline-only">Navigation bar</h2>
+			<input id="cb1" class="hamburger checkbox" type="checkbox">
+			<label for="cb1" class="hamburger menubar-button">
+				<span>&nbsp;</span>
+			</label>
+			<!--<div class="search menubar-button">&nbsp;</div>-->
+			<input id="cb2" class="search checkbox" type="checkbox">
+			<label for="cb2" class="search menubar-button">
+				<span>&nbsp;</span>
+			</label>
+			<section class="logo">
+				<h3 class="outline-only">Comverse logo</h3>
+				<!--<img src="img/comverse-logo.png" alt="Comverse">-->
+			</section>
+			<section class="menu-bar">
+				<h3 class="outline-only">Menu bar</h3>
+				<!--
+				ul>li*4>section>h4{Menu$},ul>li*2>h5{Item$}
+				-->
 				<ul>
 					<li>
-						<p>Your needs</p>
-						<ul>
-							<li><a href="item1_1.html">item 124241</a></li>
-							<li><a href="item1_2.html">item 2</a></li>
-							<li><a href="item1_3.html">item 3</a></li>
-						</ul>
+						<section>
+							<h4>Solutions</h4>
+							<ul class="dropdown">
+								<li>
+									<h5><a href="#">Digital services enablement</a></h5>
+								</li>
+								<li>
+									<h5><a href="#">Revenue &amp; customer management</a></h5>
+								</li>
+								<li>
+									<h5><a href="#">Communication BSS solutions</a></h5>
+								</li>
+								<li>
+									<h5><a href="#">Managed services</a></h5>
+								</li>
+							</ul>
+						</section>
 					</li>
 					<li>
-						<p>Our portfolio</p>
-						<ul>
-							<li><a href="item2_1.html">item 1</a></li>
-							<li><a href="item2_2.html">item 2</a></li>
-							<li><a href="item2_3.html">item 3</a></li>
-						</ul>
+						<section>
+							<h4>Products</h4>
+							<ul class="dropdown">
+								<li>
+									<h5><a href="#">COMVERSE DIGITAL SERVICES</a></h5>
+								</li>
+								<li>
+									<h5><a href="#">Comverse Traditional VAS (TVAS)</a></h5>
+								</li>
+								<li>
+									<h5><a href="#">Comverse Evolved Communication Suite (ECS)</a></h5>
+								</li>
+								<li>
+									<h5><a href="#">Comverse Unified Communications (UC)</a></h5>
+								</li>
+								<li>
+									<h5><a href="#">COMVERSE ENTERPRISE MONETIZATION SOLUTIONS</a></h5>
+								</li>
+								<li>
+									<h5><a href="#">Comverse Kenan FX - On-Premise Solution</a></h5>
+								</li>
+								<li>
+									<h5><a href="#">Comverse Kenan CX - Private Cloud Billing</a></h5>
+								</li>
+								<li>
+									<h5><a href="#">Comverse Kenan AX - Agile SaaS</a></h5>
+								</li>
+								<li>
+									<h5><a href="#">COMVERSE COMMUNICATIONS BSS SOLUTIONS</a></h5>
+								</li>
+								<li>
+									<h5><a href="#">Comverse ONE Converged Billing</a></h5>
+								</li>
+								<li>
+									<h5><a href="#">Comverse Postpaid</a></h5>
+								</li>
+								<li>
+									<h5><a href="#">COMVERSE MANAGED SERVICES</a></h5>
+								</li>
+								<li>
+									<h5><a href="#">Comverse Managed Operations</a></h5>
+								</li>
+								<li>
+									<h5><a href="#">Comverse Managed Transformation</a></h5>
+								</li>
+								<li>
+									<h5><a href="#">Comverse SaaS Solution</a></h5>
+								</li>
+							</ul>
+						</section>
 					</li>
 					<li>
-						<p>News &amp; media</p>
-						<ul>
-							<li><a href="item3_1.html">item 1</a></li>
-							<li><a href="item3_2.html">item 2</a></li>
-							<li><a href="item3_3.html">item 3</a></li>
-						</ul>
+						<section>
+							<h4>News &amp; media</h4>
+							<ul class="dropdown">
+								<li>
+									<h5><a href="#">Press Releases</a></h5>
+								</li>
+								<li>
+									<h5><a href="#">Events</a></h5>
+								</li>
+								<li>
+									<h5><a href="#">In the News</a></h5>
+								</li>
+								<li>
+									<h5><a href="#">Success Stories</a></h5>
+								</li>
+								<li>
+									<h5><a href="#">Awards</a></h5>
+								</li>
+								<li>
+									<h5><a href="#">Multimedia & Webinars</a></h5>
+								</li>
+								<li>
+									<h5><a href="#">Newsletter</a></h5>
+								</li>
+								<li>
+									<h5><a href="#">Articles and Papers</a></h5>
+								</li>
+							</ul>
+						</section>
 					</li>
 					<li>
-						<p>About Comverse</p>
-						<ul>
-							<li><a href="item4_1.html">item 1</a></li>
-							<li><a href="item4_2.html">item 2</a></li>
-							<li><a href="item4_3.html">item 3</a></li>
-						</ul>
+						<section>
+							<h4>About Comverse</h4>
+							<ul class="dropdown">
+								<li>
+									<h5><a href="#">Overview</a></h5>
+								</li>
+								<li>
+									<h5><a href="#">Management</a></h5>
+								</li>
+								<li>
+									<h5><a href="#">Investors</a></h5>
+								</li>
+								<li>
+									<h5><a href="#">Contact Us</a></h5>
+								</li>
+								<li>
+									<h5><a href="#">Careers</a></h5>
+								</li>
+								<li>
+									<h5><a href="#">Partners</a></h5>
+								</li>
+								<li>
+									<h5><a href="#">Customers</a></h5>
+								</li>
+								<li>
+									<h5><a href="#">Comverse Training</a></h5>
+								</li>
+								<li>
+									<h5><a href="#">Values & Corporate Responsibility</a></h5>
+								</li>
+								<li>
+									<h5><a href="#">Industry Involvement</a></h5>
+								</li>
+							</ul>
+						</section>
 					</li>
 				</ul>
-			</nav>
-			<form>
-				<input type="search">
-			</form>
-		</header>
+			</section>
+			<div class="links-and-search">
+				<section class="links">
+					<h3 class="outline-only">Links</h3>
+					<ul>
+						<li><a href="#">EN &#x25be;</a></li>
+						<li><a href="#">Customer login</a></li>
+					</ul>
+				</section>
+				<section class="search-bar">
+					<h3 class="outline-only">Search</h3>
+					<form class="search">
+						<input type="search">
+					</form>
+				</section>
+			</div>
+			</div>
+		</nav>
 
-		<section class="events">
-			<div class="events_container">
-				<h2><strong>Free</strong> Your Markets From<br>IT <strong>Complexity</strong></h2>
-				<h3>
-					Comverse Policy Studio<br>1st Ever Marketing-Oriented Policy Tool
-				</h3>
-				<a class="card button" href="learn_more.html">Learn more</a>
+		
+		<!--
+		section>h2{Image carousel},ul>li*4>section>h3{SomeHeader},p{text},div.button
+		-->
 
-
+		<section class="highlights pane">
+			<div class="center-wrapper">
+			<h2 class="outline-only">Comverse highlights</h2>
+			<ul>
+				<li>
+					<section>
+						<h3><strong>Free</strong> your markets from IT
+						<strong>complexity</strong>.</h3>
+						<p>Comverse policy studio.</p>
+						<p>1st ever marketing-oriented policy tool.</p>
+						<div class="button"><a href="#">LEARN MORE</a></div>
+					</section>
+				</li>
+				<li>
+					<section>
+						<h3>Be prosperous.</h3>
+						<p>Enterprises must capture new revenue in real time.</p>
+						<p>Our customers are doing just that - with agile,
+						carrier-grade, cloud monetization solutions.</p>
+						<p>The Monetization Realization Platform:</p>
+						<p>Kenan FX, Kenan CX, Kenan AX</p>
+						<div class="button"><a href="#">LEARN MORE</a></div>
+					</section>
+				</li>
+				<li>
+					<section>
+						<h3>Be ready.</h3>
+						<p>Even tomorrow's standards will change 
+						faster than you can imagine.</p>
+						<p>We'll help you look further ahead.</p>
+						<p>The Comverse BSS Solution Suite:</p>
+						<p>Comverse ONE, Converged Billing, Comverse Pos</p>
+						<div class="button"><a href="#">LEARN MORE</a></div>
+					</section>
+				</li>
+				<li>
+					<section>
+						<h3>Be better.</h3>
+						<p>Let Comverse deliver industry-best solutions to you 
+						while you stay focused on customers &amp; opportunities.</p>
+						<p>Comverse Managed Services:</p>
+						<p>Managed Operations, Managed Transformation, SaaS Solutions</p>
+						<div class="button"><a href="#">LEARN MORE</a></div>
+					</section>
+				</li>
+			</ul>
+			<section class="carousel-menu">
 				<ul>
-					<li>
-						<section class="card one">
-							<h4>Comverse is Value-Added Service Global Market Leader.</h4>
-							<a href="page1.html">Read more</a>
-						</section>
-					</li>
-					<li>
-						<section class="card two">
-							<h4>Managed Services World Congress September 18-19 Berlin, Germany.</h4>
-							<a href="page2.html">Read more</a>
-						</section>
-					</li>
-					<li>
-						<section class="card three">
-							<h4>Comverse: Enabling a world of Connected Possibilities.</h4>
-							<a href="page3.html">Watch now</a>
-						</section>
-					</li>
+					<li class="carousel-button">1</li>
+					<li class="carousel-button">2</li>
+					<li class="carousel-button">3</li>
+					<li class="carousel-button">4</li>
 				</ul>
+			</section>
+			<section class="article-cards">
+				<h3 class="outline-only">Articles</h3>
+				<article class="one">
+					<h4>Comverse is value-added service global market leader.</h4>
+					<a href="">Read more</a>
+				</article>
+				<article class="two">
+					<h4>Managed services world congress September 18-19 Berlin, Germany</h4>
+					<a href="">Read more</a>
+				</article>
+				<article class="three">
+					<h4>Comverse: Enabling a world of connected possibilities</h4>
+					<a href="">Watch now</a>
+				</article>
+			</section>
 			</div>
 		</section>
-		<article class="solutions">
+
+		<!--
+		section>h2{What can we do for you?},(ul>li*6>section>h3.outline-only{sol$},a>div.solution-img.${sol$}),div.button{See all of our solutions.}
+		-->
+
+		<section class="solutions pane">
+			<div class="center-wrapper">
 			<h2>What can we do for you?</h2>
 			<ul>
 				<li>
-					<div class="sol_image one">&nbsp;</div>
-					<h3>Business analitics</h3>
+					<section>
+						<h3 class="outline-only">Data monetization</h3>
+						<a href=""><div class="solution-img one">Data monetization</div></a>
+					</section>
 				</li>
 				<li>
-					<div class="sol_image two"></div>
-					<h3>Business transform</h3>
+					<section>
+						<h3 class="outline-only">Machine to machine (M2M)</h3>
+						<a href=""><div class="solution-img two">Machine to machine (M2M)</div></a>
+					</section>
 				</li>
 				<li>
-					<div class="sol_image three"></div>
-					<h3>Diti-CX</h3>
+					<section>
+						<h3 class="outline-only">Over-the-top (OTT)</h3>
+						<a href=""><div class="solution-img three">Over-the-top (OTT)</div></a>
+					</section>
 				</li>
 				<li>
-					<div class="sol_image four"></div>
-					<h3>Optimization efficient</h3>
+					<section>
+						<h3 class="outline-only">Cloud computing</h3>
+						<a href=""><div class="solution-img four">Cloud computing</div></a>
+					</section>
 				</li>
 				<li>
-					<div class="sol_image five"></div>
-					<h3>Personal security</h3>
+					<section>
+						<h3 class="outline-only">Managed services</h3>
+						<a href=""><div class="solution-img five">Managed services</div></a>
+					</section>
 				</li>
 				<li>
-					<div class="sol_image six"></div>
-					<h3>Data monetization</h3>
+					<section>
+						<h3 class="outline-only">Social media</h3>
+						<a href=""><div class="solution-img six">Social media</div></a>
+					</section>
 				</li>
 			</ul>
-			<a class="card button" href="solutions.html">See all of our solutions</a>
-		</article>
+			<div class="button"><a href="#">See all of our solutions</a></div>
+			</div>
+		</section>
 
-		<article class="schedule">
-			<h2>What's happening at comverse?</h2>
+		<!--
+		section>h2{What's happening at Comverse?},ul>li*3>section>h3.outline-only{cal$},(article>h4{cal$},(header>p.day{04},p.month{SEP})),a{All news}
+		-->
+
+		<section class="news pane">
+			<div class="center-wrapper">
+			<h2>What's happening at Comverse?</h2>
 			<ul>
 				<li>
-					<section class="scheduledevent">
-						<h3>News</h3>
-						<article>
-							<div class="cal"></div>
-							<h3>Comverse regains lead in convergent charging market regains lead in</h3>
-						</article>
-						<a href="news.html">All news</a>
-					</section>
+					<h4>NEWS</h4>
+					<article>
+						<header>
+							<p class="day">04</p>
+							<p class="month">SEP</p>
+						</header>
+						<p>Comverse regains lead in convergent charging market regains lead in</p>
+					</article>
+					<a href="">All news</a>
 				</li>
 				<li>
-					<section class="scheduledevent">
-						<h3>Events</h3>
-						<article>
-							<div class="cal"></div>
-							<h3>Comverse regains lead in convergent charging market regains lead in</h3>
-						</article>
-						<a href="events.html">All events</a>
-					</section>
+					<h4>EVENTS</h4>
+					<article>
+						<header>
+							<p class="day">04</p>
+							<p class="month">SEP</p>
+						</header>
+						<p>Comverse regains lead in convergent charging market regains lead in</p>
+					</article>
+					<a href="">All events</a>
 				</li>
 				<li>
-					<section class="scheduledevent">
-						<h3> <span> <!-- ??? --> </span> </h3>
-						<article>
-							<div class="cal"></div>
-							<h3>Comverse regains lead in convergent charging market regains lead in</h3>
-						</article>
-						<a href="events.html">All events</a>
-					</section>
+					<h4 class="outline-only">EVENTS</h4>
+					<article>
+						<header>
+							<p class="day">04</p>
+							<p class="month">SEP</p>
+						</header>
+						<p>Comverse regains lead in convergent charging market regains lead in</p>
+					</article>
+					<a href="">All events</a>
 				</li>
 			</ul>
-		</article>
+			</div>
+		</section>
 
-		<section class="stories clearfix">
+		<!--
+		section>h2{Success stories},ul>li*3>section>h3.outline-only{story$},(blockquote>img,h4{story$},hr,footer[itemscope itemtype="http://schema.org/Person"]>p[itemprop="name"],p[itemprop="jobTitle"]
+		-->
+
+		<section class="stories pane">
+			<div class="center-wrapper">
 			<h2>Success stories</h2>
 			<ul>
 				<li>
-					<div class"container clearfix">
-						<div class="flipper">
+					<section>
+						<h3 class="outline-only">Mob</h3>
+						<blockquote class="flip-wrapper">
 							<div class="front">
-								<blockquote class="personquote">
-									<div class="face">
-										<img src="img/CB-JP-face.png" alt="">
-									</div>
-									<h3>We have very good and very warm relations with Comverse. We always achieved...</h3>
-									<hr>
-									<footer itemscope itemtype="http://schema.org/Person">
-										<p class="name" itemprop="name">Sergey Korotych</p>
-										<p itemprop="jobTitle">Deputy CTO, 3 Mob Ukraine</p>
-									</footer>
-								</blockquote>
+								<div class="face">
+									<img src="img/CB-JP-face.png" alt="">
+								</div>
+								<h4>We have very good and very warm relations with Comverse. We always achieved...</h4>
+								<hr>
+								<footer itemscope itemtype="http://schema.org/Person">
+									<p class="firstname" itemprop="name">Sergey Korotych</p>
+									<p itemprop="jobTitle">Deputy CTO, 3 Mob Ukraine</p>
+								</footer>
 							</div>
 							<div class="back">
-								<h3>We have very good and very warm relations with Comverse. We always achieved whatever we wanted with the help of Comverse.</h3>
+								<h4>We have very good and very warm relations with Comverse. We always achieved...</h4>
 							</div>
-						</div>
-					</div>
-					<div class="clearfix"></div>
-					<ul class="companies clearfix">
-						<li>
+						</blockquote>
+						<div class="company one">
 							<img src="img/Kyivstarw_w108px_X_h95.jpg" alt="">
-						</li>
-						<li>
-							<img src="img/Jersey_Telecom_w100px_X_h42px.jpg" alt="">
-						</li>
-						<li>
-							<img src="img/cable_wireless_w100px_X_h42px2.jpg" alt="">
-						</li>
-					</ul>
+						</div>
+						<div class="company two">
+							<img src="img/upc_w108px_X_h95px.jpg" alt="">
+						</div>
+						<div class="company three">
+							<img src="img/VIDEOCON_w108px_X_h95px.jpg" alt="">
+						</div>
+					</section>
 				</li>
 				<li>
-					<ul class="companies clearfix">
-						<li>
+					<section>
+						<h3 class="outline-only">Multi-Links</h3>
+						<div class="company four">
+							<img src="img/upc_w108px_X_h95px.jpg" alt="">
+						</div>
+						<div class="company five">
 							<img src="img/Kyivstarw_w108px_X_h95.jpg" alt="">
-						</li>
-						<li>
-							<img src="img/Jersey_Telecom_w100px_X_h42px.jpg" alt="">
-						</li>
-						<li>
-							<img src="img/cable_wireless_w100px_X_h42px2.jpg" alt="">
-						</li>
-					</ul>
-					<div class="clearfix"></div>
-					<div class"container clearfix">
-						<div class="flipper">
+						</div>
+						<div class="company six">
+							<img src="img/VIDEOCON_w108px_X_h95px.jpg" alt="">
+						</div>
+						<blockquote class="flip-wrapper">
 							<div class="front">
-								<blockquote class="personquote">
-									<div class="face">
-										<img src="img/JT-GM-face.png" alt="">
-									</div>
-									<h3>Comverse has demonstrated that they are partners, not just suppliers, because they understand our needs, our situations; together we are...</h3>
-									<hr>
-									<footer itemscope itemtype="http://schema.org/Person">
-										<p class="name" itemprop="name">Adale Kehassan</p>
-										<p itemprop="jobTitle">CIO of Multi-links</p>
-									</footer>
-								</blockquote>
+								<div class="face">
+									<img src="img/JT-GM-face.png" alt="">
+								</div>
+								<h4>Comverse has demonstrated that they are partners, not just suppliers, because they understand our needs, our situations; together we are...</h4>
+								<hr>
+								<footer itemscope itemtype="http://schema.org/Person">
+									<p class="firstname" itemprop="name">Adale Kehassan</p>
+									<p itemprop="jobTitle">CIO of Multi-Links</p>
+								</footer>
 							</div>
 							<div class="back">
-								<h3>Comverse has demonstrated that they are partners, not just suppliers, because they understand our needs, our situations; together we are unstoppable!</h3>
+								<h4>Comverse has demonstrated that they are partners, not just suppliers, because they understand our needs, our situations; together we are...</h4>
 							</div>
-						</div>
-					</div>
+						</blockquote>
+					</section>
 				</li>
 				<li>
-					<div class"container clearfix">
-						<div class="flipper">
+					<section class="last">
+						<h3 class="outline-only">Tata Sky</h3>
+						<blockquote class="flip-wrapper">
 							<div class="front">
-								<blockquote class="personquote">
-									<h3>Comverse has been able to fully deliver what we want and we have peers...</h3>
-									<hr>
-									<footer itemscope itemtype="http://schema.org/Person">
-										<p class="name" itemprop="name">Ravishanker</p>
-										<p itemprop="jobTitle">Tata Sky CIO N.</p>
-									</footer>
-								</blockquote>
+								<!--
+								<div class="face">
+									<img src="img/CB-JP-face.png" alt="">
+								</div>
+								-->
+								<h4>Comverse has been able to fully deliver what we want and we have peers...</h4>
+								<hr>
+								<footer itemscope itemtype="http://schema.org/Person">
+									<p class="firstname" itemprop="name">Ravishanker</p>
+									<p itemprop="jobTitle">Tata Sky CIO N.</p>
+								</footer>
 							</div>
 							<div class="back">
-								<h3>Comverse has been able to fully deliver what we want and we have peers in the business that blah blah blah</h3>
+								<h4>Comverse has been able to fully deliver what we want and we have peers...</h4>
 							</div>
+						</blockquote>
+						<div class="company seven">
+							<img src="img/VIDEOCON_w108px_X_h95px.jpg" alt="">
 						</div>
-					</div>
-					<div class="clearfix"></div>
-					<ul class="companies clearfix">
-						<li>
+						<div class="company eight">
 							<img src="img/Kyivstarw_w108px_X_h95.jpg" alt="">
-						</li>
-						<li>
-							<img src="img/Jersey_Telecom_w100px_X_h42px.jpg" alt="">
-						</li>
-						<li>
-							<img src="img/cable_wireless_w100px_X_h42px2.jpg" alt="">
-						</li>
-					</ul>
+						</div>
+					</section>
 				</li>
 			</ul>
-			<a class="card button" href="success_stories.html">All 256 Sucess Stories</a>
+			<div class="button"><a href="#">All 256 success stories</a></div>
+			</div>
 		</section>
 
-		<footer class="pane bottom clearfix">
-			<nav>
+		<!--
+		footer>h2.outline-only{Footer},ul>li*2>section>h3{header$},ul>li*2>a
+		-->
+		<footer class="footer pane">
+			<div class="center-wrapper">
+			<h2 class="outline-only">Footer</h2>
+			<ul>
+				<li>
+					<section>
+						<h3>Key solutions</h3>
+						<ul>
+							<li><a href="">Monetizing Data</a></li>
+							<li><a href="">Over the Top(OTT)</a></li>
+							<li><a href="">Machine to Machine(M2M)</a></li>
+							<li><a href="">Cloud computing</a></li>
+							<li><a href="">Managed Services</a></li>
+							<li><a href="">Customer experience management</a></li>
+							<li><a href="">Rich communication suite(RCS)</a></li>
+							<li><a href="">Social media</a></li>
+							<li><a href="">4F/LTE</a></li>
+						</ul>
+					</section>
+				</li>
+				<li>
+					<section>
+						<h3>Products &amp; services</h3>
+						<ul>
+							<li><a href="">Billing</a></li>
+							<li><a href="">VAS</a></li>
+							<li><a href="">Mobile internet</a></li>
+							<li><a href="">Global services</a></li>
+							<li><a href="">Training services</a></li>
+						</ul>
+					</section>
+				</li>
+				<li>
+					<section>
+						<h3>Company</h3>
+						<ul>
+							<li><a href="">Executive profiles</a></li>
+							<li><a href="">Clients</a></li>
+							<li><a href="">Investors</a></li>
+							<li><a href="">Partners</a></li>
+							<li><a href="">Corporate responsibility</a></li>
+							<li><a href="">Industry involvment</a></li>
+							<li><a href="">Careers</a></li>
+						</ul>
+					</section>
+				</li>
+			</ul>
+			<section class=social>
+				<h2 class="outline-only">Social media</h2>
+				<h3>Latest blog posts</h3>
+				<article>
+					<header>
+						<p class="day">04</p>
+						<p class="month">SEP</p>
+					</header>
+					<p>Comverse regains lead in convergent charging market</p>
+				</article>
+				<hr>
+				<h3>Subscribe to Comverse</h3>
+				<section class="subscribe-box">
+					<h4 class="outline-only">Subscribe</h3>
+					<form class="subscribe">
+						<input type="email">
+					</form>
+					<div class="submit-button"><a href="#">Sign up</a></div>
+				</section>
 				<ul>
-					<li>
-						<p>Key solutions</p>
-						<ul>
-							<li><a href="link1_1.html">Monetizing Data</a></li>
-							<li><a href="link1_2.html">Over the Top (OTT)</a></li>
-							<li><a href="link1_3.html">Machine to Machine (M2M)</a></li>
-						</ul>
-					</li>
-					<li>
-						<p>Products &amp; services</p>
-						<ul>
-							<li><a href="link2_1.html">Billing</a></li>
-							<li><a href="link2_2.html">VAS</a></li>
-							<li><a href="link2_3.html">Mobile Internet</a></li>
-						</ul>
-					</li>
-					<li>
-						<p>Company</p>
-						<ul>
-							<li><a href="link3_1.html">Executive profiles</a></li>
-							<li><a href="link3_2.html">Clients</a></li>
-							<li><a href="link3_3.html">Investors</a></li>
-						</ul>
-					</li>
+					<li><a href=""><div class="social-img one"> </div></a></li>
+					<li><a href=""><div class="social-img two"> </div></a></li>
+					<li><a href=""><div class="social-img three"> </div></a></li>
 				</ul>
-			</nav>
+			</section>
+			</div>
 		</footer>
 
-        <!-- ========================================== -->
-        <!-- Here ends my markup design of Comverse.com -->
-        <!-- ========================================== -->
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
-        </script>
 		<!-- Live reload -->
 		<script src="//localhost:35729/livereload.js"></script>
     </body>

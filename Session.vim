@@ -24,11 +24,11 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
 endif
 set shortmess=aoO
 badd +1 index.html
-badd +0 css/main.css
+badd +0 scss/main.scss
 argglobal
 silent! argdel *
 argadd index.html
-argadd css/main.css
+argadd scss/main.scss
 set stal=2
 edit index.html
 set splitbelow splitright
@@ -46,13 +46,13 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 9) / 19)
+let s:l = 1 - ((0 * winheight(0) + 22) / 44)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 1
 normal! 0
-tabedit css/main.css
+tabedit scss/main.scss
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -69,7 +69,7 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 9) / 19)
+let s:l = 1 - ((0 * winheight(0) + 22) / 44)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt

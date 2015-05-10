@@ -2,42 +2,56 @@ module.exports = function (grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		dirs: {
-			src: 'src',
 			dest: './',
-			img: 'img'
+			css: 'css',
+			scss: 'scss'
 		},
 		connect: {
 		  server: {
 			options: {
 			  port: 8000,
-			  base: '.'
+			  base: '<%= dirs.dest %>',
+			  livereload: true
 			}
 		  }
 		},
 		validation: {
 			options: {
 				reset: grunt.option('reset') || false,
-				stoponerror: false,
-				relaxerror: ['Bad value X-UA-Compatible for attribute http-equiv on element meta.'] //ignores these errors 
+				//reportpath: false,
+				//stoponerror: false
 			},
 			files: {
-				src: ['<%= dirs.dest %>/index.html']
+				src: ['*.html']
+			}
+		},
+		compass: {
+			dist: {
+				options: {
+					config: "config.rb"
+				},
 			}
 		},
 		watch: {
-			files: ['<%= dirs.src %>/outline.md', 'index.html', 'css/*'],
-			options: {
-				livereload: 35729,
+			src: {
+				files: [ 'index.html', '<%= dirs.css %>/*' ],
+				options: {
+					livereload: 35729,
+				},
+				tasks: ['validation']
 			},
-			tasks: ['validation']
+			compass_compile: {
+				files: [ '<%= dirs.scss %>/*' ],
+				tasks: ['compass']
+			}
 		}
 	});
 
 	// Load grunt plugins.
-	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-html-validation');
 	grunt.loadNpmTasks('grunt-contrib-connect');
+	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-contrib-compass');
 
-	// Default task.
 	grunt.registerTask('default', ['connect', 'watch']);
 };
