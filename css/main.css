@@ -220,7 +220,7 @@ h3 {
   color: #DDDDDD; }
 
 .highlights.pane {
-  background: url('./img/slide-bg-complexity.jpg?1429209110') 0 0 no-repeat;
+  background: url('../img/slide-bg-complexity.jpg?1429209110') 0 0 no-repeat;
   background-attachment: fixed;
   background-position: center;
   background-size: cover; }
@@ -266,43 +266,43 @@ h3 {
   padding-top: 63px; }
 
 .solution-img.one {
-  background: url('./img/solution_icon_biz-analitics.png?1429209110') 0 0 no-repeat; }
+  background: url('../img/solution_icon_biz-analitics.png?1429209110') 0 0 no-repeat; }
 
 .solution-img.one:hover {
-  background: url('./img/solution_icon_biz-analitics_hover.png?1429209110') 0 0 no-repeat; }
+  background: url('../img/solution_icon_biz-analitics_hover.png?1429209110') 0 0 no-repeat; }
 
 .solution-img.two {
-  background: url('./img/solution_icon_biz-transform.png?1429209110') 0 0 no-repeat; }
+  background: url('../img/solution_icon_biz-transform.png?1429209110') 0 0 no-repeat; }
 
 .solution-img.two:hover {
-  background: url('./img/solution_icon_biz-transform_hover.png?1429209110') 0 0 no-repeat; }
+  background: url('../img/solution_icon_biz-transform_hover.png?1429209110') 0 0 no-repeat; }
 
 .solution-img.three {
-  background: url('./img/solution_icon_diti-cx.png?1429209110') 0 0 no-repeat; }
+  background: url('../img/solution_icon_diti-cx.png?1429209110') 0 0 no-repeat; }
 
 .solution-img.three:hover {
-  background: url('./img/solution_icon_diti-cx_hover.png?1429209110') 0 0 no-repeat; }
+  background: url('../img/solution_icon_diti-cx_hover.png?1429209110') 0 0 no-repeat; }
 
 .solution-img.four {
-  background: url('./img/solution_icon_optimize-efficnt.png?1429209110') 0 0 no-repeat; }
+  background: url('../img/solution_icon_optimize-efficnt.png?1429209110') 0 0 no-repeat; }
 
 .solution-img.four:hover {
-  background: url('./img/solution_icon_optimize-efficnt_hover.png?1429209110') 0 0 no-repeat; }
+  background: url('../img/solution_icon_optimize-efficnt_hover.png?1429209110') 0 0 no-repeat; }
 
 .solution-img.five {
-  background: url('./img/solution_icon_personal.png?1429209110') 0 0 no-repeat; }
+  background: url('../img/solution_icon_personal.png?1429209110') 0 0 no-repeat; }
 
 .solution-img.five:hover {
-  background: url('./img/solution_icon_personal_hover.png?1429209110') 0 0 no-repeat; }
+  background: url('../img/solution_icon_personal_hover.png?1429209110') 0 0 no-repeat; }
 
 .solution-img.six {
-  background: url('./img/solution_icon_smart-money.png?1429209110') 0 0 no-repeat; }
+  background: url('../img/solution_icon_smart-money.png?1429209110') 0 0 no-repeat; }
 
 .solution-img.six:hover {
-  background: url('./img/solution_icon_smart-money_hover.png?1429209110') 0 0 no-repeat; }
+  background: url('../img/solution_icon_smart-money_hover.png?1429209110') 0 0 no-repeat; }
 
 .news.pane {
-  background: url('./img/news-and-events-bg.jpg?1429209110') 0 0 no-repeat;
+  background: url('../img/news-and-events-bg.jpg?1429209110') 0 0 no-repeat;
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -331,7 +331,7 @@ h3 {
   padding-left: 2rem;
   margin-left: 1rem;
   background-repeat: no-repeat;
-  background-image: url('./img/eventListIconEvents.png?1429209110');
+  background-image: url('../img/eventListIconEvents.png?1429209110');
   -moz-transition: all 0.35s ease-in-out;
   -o-transition: all 0.35s ease-in-out;
   -webkit-transition: all 0.35s ease-in-out;
@@ -339,12 +339,12 @@ h3 {
 .news.pane a:hover {
   color: #a0a0a0; }
 .news.pane a:hover {
-  background-image: url('./img/eventListIconEvents_hover.png?1429209110'); }
+  background-image: url('../img/eventListIconEvents_hover.png?1429209110'); }
 
 .news.pane li:first-child a {
-  background-image: url('./img/eventListIconNews.png?1429209110'); }
+  background-image: url('../img/eventListIconNews.png?1429209110'); }
 .news.pane li:first-child a:hover {
-  background-image: url('./img/eventListIconNews_hover.png?1429209110'); }
+  background-image: url('../img/eventListIconNews_hover.png?1429209110'); }
 
 .news.pane li {
   text-align: left; }
@@ -423,22 +423,22 @@ h3 {
   padding-top: 22px; }
 
 .social-img.one {
-  background: url('./img/socialMenuIcon-linkdin.png?1429209110') 0 0 no-repeat; }
+  background: url('../img/socialMenuIcon-linkdin.png?1429209110') 0 0 no-repeat; }
 
 .social-img.one:hover {
-  background: url('./img/socialMenuIcon-linkdin_hover.png?1429209110') 0 0 no-repeat; }
+  background: url('../img/socialMenuIcon-linkdin_hover.png?1429209110') 0 0 no-repeat; }
 
 .social-img.two {
-  background: url('./img/socialMenuIcon-twitter.png?1429209110') 0 0 no-repeat; }
+  background: url('../img/socialMenuIcon-twitter.png?1429209110') 0 0 no-repeat; }
 
 .social-img.two:hover {
-  background: url('./img/socialMenuIcon-twitter_hover.png?1429209110') 0 0 no-repeat; }
+  background: url('../img/socialMenuIcon-twitter_hover.png?1429209110') 0 0 no-repeat; }
 
 .social-img.three {
-  background: url('./img/socialMenuIcon-youtube.png?1429209110') 0 0 no-repeat; }
+  background: url('../img/socialMenuIcon-youtube.png?1429209110') 0 0 no-repeat; }
 
 .social-img.three:hover {
-  background: url('./img/socialMenuIcon-youtube_hover.png?1429209110') 0 0 no-repeat; }
+  background: url('../img/socialMenuIcon-youtube_hover.png?1429209110') 0 0 no-repeat; }
 
 .menu-bar li, .links li {
   background-color: white;
@@ -458,7 +458,7 @@ h3 {
     display: block; } }
 
 .search-bar input {
-  background: url('./img/searchBtn.png?1429209110') 0 0 no-repeat;
+  background: url('../img/searchBtn.png?1429209110') 0 0 no-repeat;
   background-color: white;
   background-repeat: no-repeat;
   background-position: right;
@@ -485,7 +485,7 @@ h3 {
 /* The search menu button. */
 .search.menubar-button {
   float: right;
-  background: url('./img/searchBtnMobile.png?1429209110') 0 0 no-repeat;
+  background: url('../img/searchBtnMobile.png?1429209110') 0 0 no-repeat;
   background-color: #eee;
   background-position: center;
   width: 21px;
@@ -500,7 +500,7 @@ h3 {
 
 .hamburger.menubar-button {
   float: left;
-  background: url('./img/hamburger-icon.png?1429209110') 0 0 no-repeat;
+  background: url('../img/hamburger-icon.png?1429209110') 0 0 no-repeat;
   background-color: #eee;
   background-position: center;
   width: 22px;
@@ -520,7 +520,7 @@ h3 {
 
 /* Testing. Consider deleting this... */
 .logo {
-  background: url('./img/comverse-logo.png?1429209110') 0 0 no-repeat;
+  background: url('../img/comverse-logo.png?1429209110') 0 0 no-repeat;
   width: 185px;
   height: 62px; }
 
@@ -602,7 +602,7 @@ h3 {
   width: 1.2em;
   height: 1.2em;
   display: inline-block;
-  background: url('./img/quote-grey.png?1429209110');
+  background: url('../img/quote-grey.png?1429209110');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -674,7 +674,7 @@ h3 {
   height: auto;
   text-align: center; }
 .company:hover {
-  background: url('./img/logos_generic_2nd_side_cut_02_w108px_x_h95px.jpg?1429209110');
+  background: url('../img/logos_generic_2nd_side_cut_02_w108px_x_h95px.jpg?1429209110');
   background-position: center; }
 .company:hover img {
   visibility: hidden; }
