@@ -24,7 +24,8 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
 endif
 set shortmess=aoO
 badd +1 index.html
-badd +0 scss/main.scss
+badd +1 scss/main.scss
+badd +0 config.rb
 argglobal
 silent! argdel *
 argadd index.html
@@ -37,6 +38,7 @@ set nosplitright
 wincmd t
 set winheight=1 winwidth=1
 argglobal
+edit index.html
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -75,7 +77,30 @@ exe s:l
 normal! zt
 1
 normal! 0
-tabnext 1
+tabedit config.rb
+set splitbelow splitright
+set nosplitbelow
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+argglobal
+edit config.rb
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
+let s:l = 1 - ((0 * winheight(0) + 22) / 44)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+1
+normal! 0
+tabnext 3
 set stal=1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf

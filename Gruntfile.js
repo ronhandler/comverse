@@ -28,7 +28,8 @@ module.exports = function (grunt) {
 		compass: {
 			dist: {
 				options: {
-					config: "config.rb"
+					config: "config.rb",
+					imagesDir: './img'
 				},
 			}
 		},
