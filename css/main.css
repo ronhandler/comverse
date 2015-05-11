@@ -172,19 +172,38 @@ h3 {
   margin: 1rem 0 1rem 0; }
 
 .article-cards article {
-  display: inline-block;
-  max-width: 15.5rem;
-  min-height: 6rem;
   border-radius: 0.5rem;
   padding: 1rem;
+  margin-bottom: 1rem;
   text-align: left;
   vertical-align: bottom; }
+@media only screen and (max-width: 1000px) {
+  .article-cards article {
+    display: block; } }
+@media only screen and (min-width: 1000px) {
+  .article-cards article {
+    display: inline-block;
+    max-width: 15.5rem; } }
+.article-cards article h4 {
+  min-height: 5rem; }
+.article-cards article a {
+  color: white;
+  vertical-align: center;
+  padding-left: 43.5px; }
+.article-cards article a:hover {
+  color: rgba(0, 61, 102, 0.6); }
 .article-cards article.one {
   background: rgba(255, 20, 147, 0.7); }
+.article-cards article.one a {
+  background: url('../img/link-icon-image.png?1429209110') 0 0 no-repeat; }
 .article-cards article.two {
   background: rgba(50, 205, 50, 0.7); }
+.article-cards article.two a {
+  background: url('../img/eventListIconEvents.png?1429209110') 0 0 no-repeat; }
 .article-cards article.three {
   background: rgba(255, 69, 0, 0.7); }
+.article-cards article.three a {
+  background: url('../img/promotion-item-arrow.png?1429209110') 0 0 no-repeat; }
 
 .navigation.pane {
   padding-bottom: 10px;
@@ -192,6 +211,7 @@ h3 {
   width: 100%;
   vertical-align: bottom;
   min-height: 60px;
+  z-index: 40;
   background-color: white; }
 @media only screen and (min-width: 1000px) {
   .navigation.pane {
@@ -244,12 +264,17 @@ h3 {
   background-image: -webkit-radial-gradient(50% 50% 0, #93cede 10px, #1e90ff 60px);
   background-image: radial-gradient(50% 50% 0, #93cede 10px, #1e90ff 60px); }
 .solutions.pane li {
-  display: inline-block;
-  width: 6.6rem;
   min-height: 5rem;
   border-radius: 0.5rem;
   padding: 1rem;
   vertical-align: bottom; }
+@media only screen and (max-width: 1000px) {
+  .solutions.pane li {
+    display: block; } }
+@media only screen and (min-width: 1000px) {
+  .solutions.pane li {
+    display: inline-block;
+    width: 6.6rem; } }
 .solutions.pane ul a {
   color: white; }
 .solutions.pane ul a:hover {
@@ -311,14 +336,25 @@ h3 {
   display: inline-block;
   min-height: 10rem;
   border-radius: 0.16667rem; }
+@media only screen and (max-width: 1000px) {
+  .news.pane li {
+    display: block; } }
+@media only screen and (min-width: 1000px) {
+  .news.pane li {
+    display: inline-block; } }
 .news.pane article {
   padding: 1rem;
-  max-width: 15.1rem;
   -moz-transition: all 0.35s ease-in-out;
   -o-transition: all 0.35s ease-in-out;
   -webkit-transition: all 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
   background-color: rgba(255, 255, 255, 0.25); }
+@media only screen and (max-width: 1000px) {
+  .news.pane article {
+    width: 100%; } }
+@media only screen and (min-width: 1000px) {
+  .news.pane article {
+    max-width: 15.1rem; } }
 .news.pane article:hover {
   background-color: rgba(255, 255, 255, 0.4); }
 .news.pane article > p {
@@ -372,7 +408,7 @@ h3 {
 
 .footer.pane > div > ul > li {
   display: inline-block;
-  max-width: 14.5rem;
+  max-width: 11.14286rem;
   text-align: left;
   vertical-align: top; }
 .footer.pane > div > * {
@@ -384,11 +420,11 @@ h3 {
   color: #a0a0a0; }
 
 .social {
-  height: 16rem;
+  height: 19rem;
   padding: 1rem;
   display: inline-block;
   background-color: rgba(255, 255, 255, 0.1);
-  max-width: 8.5rem;
+  max-width: 17rem;
   display: block; }
 .social article > *, .social .subscribe-box > *, .social .subscribe-box input {
   text-align: left;
@@ -586,6 +622,12 @@ h3 {
   max-width: 19.55rem;
   vertical-align: bottom;
   text-align: left; }
+@media only screen and (max-width: 1000px) {
+  .stories.pane li {
+    display: block; } }
+@media only screen and (min-width: 1000px) {
+  .stories.pane li {
+    display: inline-block; } }
 .stories.pane img {
   width: 5rem; }
 

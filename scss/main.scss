@@ -212,20 +212,50 @@ $carousel-button-size: 20px;
 
 .article-cards article {
 	//@include debug;
-	display: inline-block;
-	//max-width: $grid-width;
-	max-width: $grid-width - (3*$radius);
-	min-height: 6rem;
+	@include handhelds {
+		display: block;
+	}
+	@include widescreens {
+		display: inline-block;
+		max-width: $grid-width - (3*$radius);
+	}
 	border-radius: $radius;
 	padding: 2*$radius;
+	 margin-bottom: 1rem;
 	text-align: left;
 	vertical-align: bottom;
 	$transparency: 0.7;
-	&.one { background: rgba(deeppink, $transparency); }
-	&.two { background: rgba(limegreen, $transparency); }
-	&.three { background: rgba(orangered, $transparency); }
+	h4 {
+		min-height: 5rem;
+	}
+	a {
+		@include link-colors(white, darken($button-color, 30%));
+		vertical-align: center;
+		$img: 'link-icon-image.png';
+		padding-left: image-width($img)*1.5;
+	}
+	&.one {
+		background: rgba(deeppink, $transparency);
+		a {
+			$img: 'link-icon-image.png';
+			background: image-url($img) 0 0 no-repeat;
+		}
+	}
+	&.two {
+		background: rgba(limegreen, $transparency);
+		a {
+			$img: 'eventListIconEvents.png';
+			background: image-url($img) 0 0 no-repeat;
+		}
+	}
+	&.three {
+		background: rgba(orangered, $transparency);
+		a {
+			$img: 'promotion-item-arrow.png';
+			background: image-url($img) 0 0 no-repeat;
+		}
+	}
 }
-
 
 .navigation.pane {
 	padding-bottom: 10px;
@@ -233,6 +263,7 @@ $carousel-button-size: 20px;
 	width: 100%;
 	vertical-align: bottom;
 	min-height: 60px;
+	z-index: 40;
 	@include widescreens {
 		position: fixed;
 	}
@@ -250,9 +281,6 @@ $carousel-button-size: 20px;
 	}
 	.logo,.menu-bar {
 		display: inline-block;
-		@include handhelds {
-			//float: top;
-		}
 	}
 	.menu-bar .dropdown li {
 		display: block;
@@ -297,19 +325,23 @@ $carousel-button-size: 20px;
 		}
 	}
 }
-.article-cards article {
-}
 .solutions.pane {
 	@include background-image(radial-gradient(50% 50% 0, rgba(147,206,222,1) 10px, #1e90ff 60px));
 	li {
 		//@include debug;
-		display: inline-block;
 
-		width: $grid-width/2 - (3.8*$radius);
 		min-height: 5rem;
 		border-radius: $radius;
 		padding: 2*$radius;
 		vertical-align: bottom;
+
+		@include handhelds {
+			display: block;
+		}
+		@include widescreens {
+			display: inline-block;
+			width: $grid-width/2 - (3.8*$radius);
+		}
 	}
 	ul a {
 		@include link-colors(white, darken($button-color, 30%));
@@ -348,12 +380,26 @@ $carousel-button-size: 20px;
 		display: inline-block;
 		min-height: 10rem;
 		border-radius: $radius/3;
+
+		@include handhelds {
+			display: block;
+		}
+		@include widescreens {
+			display: inline-block;
+		}
 	}
 	article {
 		padding: 2*$radius;
-		max-width: $grid-width - (3.8*$radius);
 		@include transition(all 0.35s ease-in-out);
 		background-color: rgba(white, 0.25);
+
+		@include handhelds {
+			width: 100%;
+		}
+		@include widescreens {
+			max-width: $grid-width - (3.8*$radius);
+		}
+
 		&:hover {
 			background-color: rgba(white, 0.40);
 		}
@@ -413,7 +459,7 @@ $carousel-button-size: 20px;
 	& > div > ul > li {
 		display: inline-block;
 		//max-width: $grid-width;
-		max-width: $grid-width - (5*$radius);
+		max-width: $grid-width/1.4 - (2*$radius);
 		text-align: left;
 		vertical-align: top;
 	}
@@ -427,11 +473,11 @@ $carousel-button-size: 20px;
 }
 .social {
 	//width: $grid-width/2.5;
-	height: 16rem;
+	height: 19rem;
 	padding: 1rem;
 	display: inline-block;
 	background-color: rgba(white, 0.1);
-	max-width: $grid-width/2;
+	max-width: $grid-width/1;
 	display: block;
 	article>*,
 	.subscribe-box>*,
@@ -598,13 +644,6 @@ $carousel-button-size: 20px;
 	background: image-url($img) 0 0 no-repeat;
 	width: image-width($img);
 	height: image-height($img);
-
-	@include widescreens {
-		//margin-left: 10%;
-	}
-	@include handhelds {
-		//width: 70px;
-	}
 }
 
 // Dropdown menu settings.
@@ -681,6 +720,13 @@ $stories-width: $grid-width*1.15;
 		//min-height: 18rem;
 		vertical-align: bottom;
 		text-align: left;
+
+		@include handhelds {
+			display: block;
+		}
+		@include widescreens {
+			display: inline-block;
+		}
 	}
 	img {
 		width: 5rem;
